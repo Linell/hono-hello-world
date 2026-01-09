@@ -15,7 +15,10 @@ app.get('/', (c) => {
 app.on(
   ["GET", "POST", "PUT"],
   "/api/inngest",
-  serve({ client: inngest, functions })
+  (c) => {
+    const handler = serve({ client: inngest, functions })
+    return handler(c);
+  }
 )
 
 export default app
