@@ -1491,8 +1491,8 @@ packages:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
   inngest@file:inngest.tgz:
-    resolution: {integrity: sha512-igZo5AfDz9HFzk1fzUbx/2wdiI8PP5YAOWvos8nYSoFQTmQ9fjfoMzEa4075quHlHFZ9hmXihuXL9ElJ699SAQ==, tarball: file:inngest.tgz}
-    version: 3.49.0
+    resolution: {integrity: sha512-MAlOwMP2QKKTnuoIhTn/HsgzEuRo54IpOgs2nRRJTH9014dgqV/doERLIzRr7nzTkc1GikiRq9e20PRRdf/vwg==, tarball: file:inngest.tgz}
+    version: 3.48.1
     engines: {node: '>=20'}
     peerDependencies:
       '@sveltejs/kit': '>=1.27.3'
