@@ -12,8 +12,8 @@ importers:
         specifier: ^4.11.3
         version: 4.11.3
       inngest:
-        specifier: ^3.49.0
-        version: 3.49.0(@opentelemetry/core@2.3.0(@opentelemetry/api@1.9.0))(hono@4.11.3)(typescript@5.9.3)(zod@3.25.76)
+        specifier: file:./inngest.tgz
+        version: file:inngest.tgz(@opentelemetry/core@2.3.0(@opentelemetry/api@1.9.0))(hono@4.11.3)(typescript@5.9.3)(zod@3.25.76)
     devDependencies:
       '@cloudflare/vite-plugin':
         specifier: ^1.2.3
@@ -1490,8 +1490,9 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  inngest@3.49.0:
-    resolution: {integrity: sha512-ISGTioh945GyumcS8s9kwgbW4CjadGKJJb3oqVmjHKMj0QKmdKKIZ35h+vKe8RNK+rPZDlGA49unNIV/HUeGYw==}
+  inngest@file:inngest.tgz:
+    resolution: {integrity: sha512-igZo5AfDz9HFzk1fzUbx/2wdiI8PP5YAOWvos8nYSoFQTmQ9fjfoMzEa4075quHlHFZ9hmXihuXL9ElJ699SAQ==, tarball: file:inngest.tgz}
+    version: 3.49.0
     engines: {node: '>=20'}
     peerDependencies:
       '@sveltejs/kit': '>=1.27.3'
@@ -3342,7 +3343,7 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inngest@3.49.0(@opentelemetry/core@2.3.0(@opentelemetry/api@1.9.0))(hono@4.11.3)(typescript@5.9.3)(zod@3.25.76):
+  inngest@file:inngest.tgz(@opentelemetry/core@2.3.0(@opentelemetry/api@1.9.0))(hono@4.11.3)(typescript@5.9.3)(zod@3.25.76):
     dependencies:
       '@bufbuild/protobuf': 2.10.2
       '@inngest/ai': 0.1.7

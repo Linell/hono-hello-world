@@ -1,5 +1,7 @@
 import { Hono } from 'hono'
 import { renderer } from './renderer'
+import { inngest, functions } from './inngest'
+import { serve } from 'inngest/hono'
 
 const app = new Hono()
 
@@ -15,15 +17,7 @@ let cachedHandler: Awaited<ReturnType<typeof import('inngest/hono')['serve']>> |
 app.on(
   ["GET", "POST", "PUT"],
   "/api/inngest",
-  async (c) => {
-    if (!cachedHandler) {
-      // Dynamic imports - deferred until request time when crypto is available
-      const { serve } = await import('inngest/hono');
-      const { functions, inngest } = await import('./inngest');
-      cachedHandler = serve({ client: inngest, functions });
-    }
-    return cachedHandler(c);
-  }
+  serve({ client: inngest, functions })
 )
 
 export default app
